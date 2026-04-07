@@ -1,16 +1,7 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18047822718"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-18047822718');
-</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Get a Free Bulk Cement Quote – CementShop | Best Wholesale Rates India</title>
@@ -244,67 +235,21 @@
       position: relative;
       overflow: hidden;
       padding-top: 60px;
-      background: linear-gradient(135deg, #08111C 0%, #14080D 55%, #0C1620 100%);
+      background: #FFFFFF;
     }
 
-    /* Animated background grid */
+    /* Subtle concrete texture overlay */
     .hero-grid {
       position: absolute;
       inset: 0;
       background-image:
-        linear-gradient(rgba(200, 16, 46, .07) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(200, 16, 46, .07) 1px, transparent 1px);
-      background-size: 48px 48px;
-      animation: gridMove 20s linear infinite;
-    }
-
-    @keyframes gridMove {
-      0% {
-        transform: translate(0, 0);
-      }
-
-      100% {
-        transform: translate(48px, 48px);
-      }
-    }
-
-    /* Gradient orbs */
-    .hero-orb {
-      position: absolute;
-      border-radius: 50%;
-      filter: blur(80px);
+        radial-gradient(circle at 20% 50%, rgba(200,16,46,.04) 0%, transparent 60%),
+        radial-gradient(circle at 80% 20%, rgba(200,16,46,.03) 0%, transparent 50%);
       pointer-events: none;
     }
 
-    .hero-orb-1 {
-      width: 500px;
-      height: 500px;
-      background: radial-gradient(circle, rgba(200, 16, 46, .25) 0%, transparent 70%);
-      top: -100px;
-      right: -100px;
-      animation: orbFloat 8s ease-in-out infinite;
-    }
-
-    .hero-orb-2 {
-      width: 400px;
-      height: 400px;
-      background: radial-gradient(circle, rgba(59, 130, 246, .15) 0%, transparent 70%);
-      bottom: -100px;
-      left: -50px;
-      animation: orbFloat 10s ease-in-out infinite reverse;
-    }
-
-    @keyframes orbFloat {
-
-      0%,
-      100% {
-        transform: translate(0, 0);
-      }
-
-      50% {
-        transform: translate(20px, -20px);
-      }
-    }
+    /* Remove old orb styles — not used on white bg */
+    .hero-orb { display: none; }
 
     .hero-in {
       position: relative;
@@ -353,71 +298,58 @@
       font-family: var(--font-h);
       font-size: clamp(28px, 7vw, 56px);
       font-weight: 700;
-      color: #fff;
+      color: var(--dark);
       line-height: 1.08;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
       letter-spacing: -.5px;
       text-transform: uppercase;
     }
 
-    .hero-title .accent {
+    .hero-title .title-red {
+      display: block;
       color: var(--red);
     }
 
-    .hero-title .highlight {
-      position: relative;
-      display: inline-block;
-    }
-
-    .hero-title .highlight::after {
-      content: '';
-      position: absolute;
-      bottom: 2px;
-      left: 0;
-      right: 0;
-      height: 3px;
-      background: linear-gradient(90deg, var(--red), transparent);
-      border-radius: 2px;
-    }
-
-    .hero-sub {
-      font-size: clamp(15px, 2vw, 17px);
-      color: rgba(255, 255, 255, .65);
-      line-height: 1.7;
+    .hero-h2 {
+      font-family: var(--font-b);
+      font-size: clamp(14px, 2.2vw, 18px);
+      font-weight: 400;
+      color: var(--gray);
+      line-height: 1.5;
       margin-bottom: 28px;
-      max-width: 520px;
+      max-width: 540px;
     }
 
-    /* Trust pills */
+    /* Trust badges row */
     .hero-trust {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 12px;
       margin-bottom: 36px;
     }
 
     .trust-pill {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
-      background: rgba(255, 255, 255, .06);
-      border: 1px solid rgba(255, 255, 255, .1);
-      color: rgba(255, 255, 255, .8);
-      font-size: 12.5px;
-      font-weight: 500;
-      padding: 6px 12px;
-      border-radius: 20px;
-      backdrop-filter: blur(4px);
+      gap: 7px;
+      background: #F7F3ED;
+      border: 1.5px solid var(--border);
+      color: var(--dark);
+      font-size: 13px;
+      font-weight: 600;
+      padding: 8px 16px;
+      border-radius: 24px;
       transition: all .2s;
     }
 
     .trust-pill:hover {
-      background: rgba(255, 255, 255, .1);
-      border-color: rgba(255, 255, 255, .2);
+      border-color: var(--red);
+      background: #fff;
+      box-shadow: 0 2px 12px rgba(200,16,46,.1);
     }
 
     .trust-pill .pi {
-      font-size: 14px;
+      font-size: 15px;
     }
 
     /* Stats row */
@@ -425,7 +357,7 @@
       display: flex;
       gap: 20px;
       padding: 20px 0;
-      border-top: 1px solid rgba(255, 255, 255, .08);
+      border-top: 1.5px solid var(--border);
       justify-content: center;
     }
 
@@ -433,7 +365,7 @@
       font-family: var(--font-h);
       font-size: 24px;
       font-weight: 700;
-      color: #fff;
+      color: var(--dark);
       line-height: 1;
     }
 
@@ -443,7 +375,7 @@
 
     .stat-lbl {
       font-size: 11px;
-      color: rgba(255, 255, 255, .5);
+      color: var(--gray);
       margin-top: 3px;
       text-transform: uppercase;
       letter-spacing: .5px;
@@ -768,20 +700,20 @@
 
     .hero-brands-lbl {
       font-size: 11px;
-      color: rgba(255, 255, 255, .35);
+      color: var(--gray);
       text-transform: uppercase;
       letter-spacing: .8px;
       white-space: nowrap;
     }
 
     .brand-chip {
-      background: rgba(255, 255, 255, .06);
-      border: 1px solid rgba(255, 255, 255, .08);
+      background: #F7F3ED;
+      border: 1px solid var(--border);
       padding: 4px 10px;
       border-radius: 4px;
       font-size: 11px;
       font-weight: 600;
-      color: rgba(255, 255, 255, .5);
+      color: var(--dark3);
       letter-spacing: .3px;
       white-space: nowrap;
     }
@@ -1456,7 +1388,7 @@
       <div class="hdr-in">
         <!-- Logo -->
         <a href="https://www.cementshop.online" class="logo" aria-label="CementShop – Home">
-          <div class="logo-mark" aria-hidden="true">B</div>
+          <div class="logo-mark" aria-hidden="true">C</div>
           <div class="logo-txt">Cement<span>Shop</span></div>
         </a>
 
@@ -1479,38 +1411,28 @@
 
   <!-- ===== HERO ===== -->
   <main id="hero" role="main">
-    <!-- Background elements -->
+    <!-- Background overlay -->
     <div class="hero-grid" aria-hidden="true"></div>
-    <div class="hero-orb hero-orb-1" aria-hidden="true"></div>
-    <div class="hero-orb hero-orb-2" aria-hidden="true"></div>
 
     <div class="hero-in">
       <div class="hero-layout">
 
         <!-- Left: Content -->
         <div class="hero-content">
-          <div class="hero-eyebrow" role="text" aria-label="Limited offer active">
-            🏗️ Bulk Cement — Best Wholesale Rates
-          </div>
 
           <h1 class="hero-title">
-            Buy Bulk Cement at Wholesale Price for<br>
-            <span class="accent">Builders &amp; Contractors</span><br>
-            <span class="highlight">Across India</span>
+            WHOLESALE BULK CEMENT
+            <span class="title-red">FOR BUILDERS &amp; CONTRACTORS</span>
           </h1>
 
-          <p class="hero-sub">
-            Get OPC 53, OPC 43, PPC & Blended Cement at the lowest wholesale rates.
-            UltraTech, ACC, Ambuja &amp; all top brands. Pan India delivery. Quote in <strong style="color:#fff;">30
-              minutes</strong>.
+          <p class="hero-h2">
+            OPC 53, OPC 43, PPC &amp; Blended &mdash; Quote in 30 Minutes
           </p>
 
-          <!-- Trust pills -->
-          <div class="hero-trust" role="list" aria-label="Key benefits">
+          <!-- Trust badges -->
+          <div class="hero-trust" role="list" aria-label="Key trust signals">
             <div class="trust-pill" role="listitem"><span class="pi">✅</span> ISI Certified</div>
-            <div class="trust-pill" role="listitem"><span class="pi">🚚</span> Pan India Delivery</div>
-            <div class="trust-pill" role="listitem"><span class="pi">💰</span> Best Wholesale Rate</div>
-            <div class="trust-pill" role="listitem"><span class="pi">📋</span> GST Billing</div>
+            <div class="trust-pill" role="listitem"><span class="pi">🚚</span> Pan India</div>
             <div class="trust-pill" role="listitem"><span class="pi">⚡</span> 30-Min Quote</div>
           </div>
 
@@ -1595,11 +1517,19 @@
               </div>
             </div>
 
-            <!-- City -->
+            <!-- Brand -->
             <div class="ff">
-              <label for="l_city">Delivery City *</label>
-              <input type="text" id="l_city" name="city" placeholder="Your city / district" required
-                autocomplete="address-level2">
+              <label for="l_brand">Choose Brand *</label>
+              <select id="l_brand" name="brand" required>
+                <option value="">Select Brand</option>
+                <option>UltraTech</option>
+                <option>ACC</option>
+                <option>Ambuja</option>
+                <option>Shree</option>
+                <option>JK</option>
+                <option>Dalmia</option>
+                <option>Other / Any Brand</option>
+              </select>
             </div>
 
             <!-- Submit -->
@@ -1655,37 +1585,16 @@
     </div><!-- /hero-in -->
   </main>
 
-  <!-- ===== CTA SECTION ===== -->
-  <section id="cta" aria-labelledby="ctaTitle">
-    <div class="cta-in">
-      <div class="cta-tag">Act Now — Limited Slots Today</div>
-      <h2 class="cta-title" id="ctaTitle">Ready to Order Bulk Cement<br>at Wholesale Rates?</h2>
-      <p class="cta-sub">Join 500+ contractors &amp; builders across India who trust CementShop for OPC, PPC &amp;
-        all top brands. Get a free quote in 30 minutes — zero obligation.</p>
-      <div class="cta-btns">
-        <button class="cta-btn-primary"
-          onclick="document.getElementById('leadCard').scrollIntoView({behavior:'smooth'})"
-          aria-label="Get your free quote now">
-          📋 Get Free Quote Now
-        </button>
-        <a href="tel:+917632872970" class="cta-btn-secondary" aria-label="Call us directly">
-          📞 Call Directly
-        </a>
-      </div>
-    </div>
-  </section>
-
   <!-- ===== FOOTER ===== -->
   <footer id="ftr" role="contentinfo">
     <div class="ftr-top">
       <!-- Brand -->
       <div class="ftr-brand">
         <div class="logo" style="margin-bottom:0">
-          <div class="logo-mark">B</div>
+          <div class="logo-mark">C</div>
           <div class="logo-txt">Cement<span>Shop</span></div>
         </div>
-        <p class="ftr-tagline">India's trusted bulk cement supplier. Best wholesale rates, all top brands, Pan India
-          delivery.</p>
+        <p class="ftr-tagline">India's trusted bulk cement supplier. Best wholesale rates, all top brands, Pan India delivery.</p>
       </div>
       <!-- Legal links -->
       <nav aria-label="Legal pages">
@@ -2037,14 +1946,14 @@
       const data = {
         name: fd.get('name')?.trim(),
         mobile: fd.get('mobile')?.trim(),
-        city: fd.get('city')?.trim(),
+        brand: fd.get('brand'),
         cement_type: fd.get('cement_type'),
         quantity: fd.get('quantity'),
         source: 'ads_leads_page'
       };
 
       // Basic client-side validation
-      if (!data.name || !data.mobile || !data.cement_type || !data.quantity || !data.city) {
+      if (!data.name || !data.mobile || !data.cement_type || !data.quantity || !data.brand) {
         showToast('⚠️ Please fill all required fields.');
         btn.innerHTML = '<span>🏗️</span><span>Get Free Quote Now</span>';
         btn.disabled = false;
