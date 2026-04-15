@@ -7,11 +7,11 @@
 <meta name="description" content="India's most trusted bulk cement supplier. OPC, PPC & Blended cement at wholesale rates for contractors, builders & developers. UltraTech, ACC, Ambuja & all top brands. Pan India delivery. Get a free quote now.">
 <meta name="keywords" content="bulk cement supplier, bulk cement online, wholesale cement India, OPC 53 bulk, PPC cement bulk, UltraTech bulk cement, cement for contractors, bulk cement delivery India">
 <meta name="robots" content="index, follow">
-<!-- Google Ads Global Site Tag -->
+<!-- Google tag (gtag.js) - Google Ads -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18047822718"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  function gtag(){window.dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'AW-18047822718');
 </script>
@@ -1419,8 +1419,14 @@ async function submitLead(e) {
   await saveToDB('leads', data);
   document.getElementById('leadForm').style.display = 'none';
   document.getElementById('leadSucc').classList.add('show');
-  // Fire Google Ads conversion pixel on successful lead form submission
-  gtag('event', 'conversion', {'send_to': 'AW-18047822718/ZsoQCM7oiJccEP7W751D'});
+  // Fire Google Ads conversion — dual method for maximum reliability
+  try {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({'event':'conversion','send_to':'AW-18047822718/ZsoQCM7oiJccEP7W751D'});
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', 'conversion', {'send_to': 'AW-18047822718/ZsoQCM7oiJccEP7W751D', 'value': 1.0, 'currency': 'INR'});
+    }
+  } catch(err) { console.warn('Conversion pixel error:', err); }
   showToast('✅ Quote request received! We\'ll call you within 30 minutes.');
 }
 
@@ -1431,8 +1437,14 @@ async function submitOrder(e) {
   await saveToDB('bulk_orders', getFormData('orderForm'));
   document.getElementById('orderForm').style.display = 'none';
   document.getElementById('orderSucc').classList.add('show');
-  // Fire Google Ads conversion pixel on successful order form submission
-  gtag('event', 'conversion', {'send_to': 'AW-18047822718/ZsoQCM7oiJccEP7W751D'});
+  // Fire Google Ads conversion — dual method for maximum reliability
+  try {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({'event':'conversion','send_to':'AW-18047822718/ZsoQCM7oiJccEP7W751D'});
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', 'conversion', {'send_to': 'AW-18047822718/ZsoQCM7oiJccEP7W751D', 'value': 1.0, 'currency': 'INR'});
+    }
+  } catch(err) { console.warn('Conversion pixel error:', err); }
 }
 
 /* =====================================================

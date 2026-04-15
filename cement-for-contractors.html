@@ -8,11 +8,11 @@
   <meta name="description"
     content="Special bulk cement pricing for contractors ordering 1000+ bags. UltraTech, ACC, Ambuja & 5 more brands. Site delivery, GST billing, dedicated account manager. Pan India.">
   <meta name="robots" content="index, follow">
-  <!-- Google Ads Global Site Tag -->
+  <!-- Google tag (gtag.js) - Google Ads -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18047822718"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag(){window.dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'AW-18047822718');
   </script>
@@ -1489,8 +1489,22 @@
       form.style.display = 'none';
       document.getElementById('leadSucc').classList.add('show');
       openThankyou();
-      // Fire Google Ads conversion pixel on successful lead form submission
-      gtag('event', 'conversion', {'send_to': 'AW-18047822718/ZsoQCM7oiJccEP7W751D'});
+
+      // Fire Google Ads conversion — dual method for maximum reliability
+      try {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          'event': 'conversion',
+          'send_to': 'AW-18047822718/ZsoQCM7oiJccEP7W751D'
+        });
+        if (typeof window.gtag === 'function') {
+          window.gtag('event', 'conversion', {
+            'send_to': 'AW-18047822718/ZsoQCM7oiJccEP7W751D',
+            'value': 1.0,
+            'currency': 'INR'
+          });
+        }
+      } catch(err) { console.warn('Conversion pixel error:', err); }
       showToast('✅ Quote request received! Our project team will call you within 30 minutes.');
     }
 

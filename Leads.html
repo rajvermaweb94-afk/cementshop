@@ -8,11 +8,11 @@
   <meta name="description"
     content="Get instant bulk cement price quotes for OPC, PPC & all top brands. UltraTech, ACC, Ambuja & more. Pan India delivery. Free quote in 30 minutes.">
   <meta name="robots" content="noindex, follow">
-  <!-- Google Ads Global Site Tag -->
+  <!-- Google tag (gtag.js) - Google Ads -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18047822718"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag(){window.dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'AW-18047822718');
   </script>
@@ -1988,8 +1988,22 @@
       form.style.display = 'none';
       document.getElementById('leadSucc').classList.add('show');
       openThankyou();
-      // Fire Google Ads conversion pixel on successful lead form submission
-      gtag('event', 'conversion', {'send_to': 'AW-18047822718/ZsoQCM7oiJccEP7W751D'});
+
+      // Fire Google Ads conversion — dual method for maximum reliability
+      try {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          'event': 'conversion',
+          'send_to': 'AW-18047822718/ZsoQCM7oiJccEP7W751D'
+        });
+        if (typeof window.gtag === 'function') {
+          window.gtag('event', 'conversion', {
+            'send_to': 'AW-18047822718/ZsoQCM7oiJccEP7W751D',
+            'value': 1.0,
+            'currency': 'INR'
+          });
+        }
+      } catch(err) { console.warn('Conversion pixel error:', err); }
       showToast('✅ Quote request received! We\'ll call you within 30 minutes.');
     }
 
