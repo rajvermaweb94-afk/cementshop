@@ -8,7 +8,14 @@
   <meta name="description"
     content="CementShop is India's trusted wholesale bulk cement supplier. Direct from authorized distributors. UltraTech, ACC, Ambuja & 8+ brands. GST billing. Pan India delivery across 25+ states.">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://www.cementshop.online/bulk-cement-supplier">
+  <!-- Google Ads Global Site Tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18047822718"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18047822718');
+  </script>
 
   <!-- Preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1585,6 +1592,8 @@
       form.style.display = 'none';
       document.getElementById('leadSucc').classList.add('show');
       openThankyou();
+      // Fire Google Ads conversion pixel on successful lead form submission
+      gtag('event', 'conversion', {'send_to': 'AW-18047822718/ZsoQCM7oiJccEP7W751D'});
       showToast('✅ Quote request received! We\'ll call you within 30 minutes.');
     }
 
