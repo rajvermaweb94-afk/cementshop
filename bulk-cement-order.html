@@ -2216,16 +2216,19 @@
   <!-- ===== SUPABASE (Direct REST API — no SDK dependency) ===== -->
   <script>
     /* =====================================================
-       SUPABASE CONFIG — same project as index.html
-       Table: leads (name, mobile, city, cement_type, quantity, source, created_at)
+       SUPABASE CONFIG — Table: connect_with_us
+       Fields: name, mobile, city, product, message, source, created_at
     ===================================================== */
     const SB_URL = 'https://wdtyvllabtjpnsinmcfp.supabase.co';
+    /* ❗ Replace with your ANON key from:
+       Supabase Dashboard → Project Settings → API → "anon" public key (starts with eyJ…) */
     const SB_KEY = 'sb_publishable_P8T4srwj9F8Yr948Y4rSng_ZgkfpGFd';
 
-    /* Direct REST fetch — bypasses SDK key-format issues entirely */
+    /* Direct REST fetch to Supabase — table: connect_with_us */
     async function saveToDB(table, data) {
       try {
         const payload = { ...data, created_at: new Date().toISOString() };
+        console.log('[CementShop] Saving to Supabase table:', table, payload);
         const res = await fetch(`${SB_URL}/rest/v1/${table}`, {
           method: 'POST',
           headers: {
@@ -2238,11 +2241,13 @@
         });
         if (!res.ok) {
           const errText = await res.text();
-          console.warn('Supabase REST error:', res.status, errText);
+          console.error('[CementShop] Supabase error', res.status, errText);
+          return false;
         }
-        return res.ok;
+        console.log('[CementShop] Supabase insert OK ✅');
+        return true;
       } catch (e) {
-        console.error('DB fetch error:', e.message);
+        console.error('[CementShop] DB fetch error:', e.message);
         return false;
       }
     }
@@ -2291,10 +2296,12 @@
         return;
       }
 
-      // Fire DB save — non-blocking (redirect happens regardless of DB outcome)
-      saveToDB('leads', data).catch(err => {
-        console.warn('Lead DB save failed. Data:', JSON.stringify(data));
-      });
+      // ⭐ AWAIT the DB save before redirect — ensures data is written to Supabase
+      const saved = await saveToDB('connect_with_us', data);
+      if (!saved) {
+        // Still redirect even if DB fails — never block the user
+        console.warn('[CementShop] DB save failed but redirecting anyway. Data:', JSON.stringify(data));
+      }
 
       // ✅ Redirect to Thank You page — conversion pixel fires from that page
       window.location.href = '/thanks-for-bulk-order';
