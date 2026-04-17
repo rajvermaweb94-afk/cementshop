@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You | CementShop</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Thank you for your bulk cement enquiry. Our team will call you within 30 minutes.">
+
+  <!-- ================================================
+       PIXEL PLACEHOLDERS — Paste your tags below
+  ================================================= -->
+
+  <!-- Meta Pixel Code -->
+  <!-- PASTE META PIXEL HERE -->
+
+  <!-- Google Ads Conversion Tag -->
+  <!-- PASTE GOOGLE ADS CONVERSION TAG HERE -->
+
+  <!-- Google Analytics Event (GA4) -->
+  <!-- PASTE GA4 EVENT TAG HERE -->
+
+  <!-- ================================================ -->
+
+  <!-- Google tag (gtag.js) - Google Ads base -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18047822718"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){window.dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18047822718');
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+
+  <style>
+    /* ===== TOKENS ===== */
+    :root {
+      --red: #C8102E;
+      --red-d: #9E0C25;
+      --dark: #0F1923;
+      --dark2: #1A2535;
+      --gray: #64748B;
+      --green: #16A34A;
+      --green-l: #4ADE80;
+      --border: #E2DDD5;
+      --white: #FFFFFF;
+      --font-h: 'Oswald', sans-serif;
+      --font-b: 'DM Sans', sans-serif;
+      --r: 8px;
+      --max: 1200px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-b);
+      background: #0a0f14;
+      color: var(--white);
+      line-height: 1.6;
+      overflow-x: hidden;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    button { cursor: pointer; border: none; outline: none; font-family: var(--font-b); }
+
+    /* ===== NAVBAR ===== */
+    #hdr {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      background: rgba(15,25,35,.97);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,.06);
+    }
+
+    .hdr-in {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+    }
+
+    .logo { display: flex; align-items: center; gap: 10px; }
+
+    .logo-mark {
+      width: 32px; height: 32px;
+      background: var(--red);
+      border-radius: 7px;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-h);
+      font-size: 15px; font-weight: 700; color: #fff;
+    }
+
+    .logo-txt {
+      font-family: var(--font-h);
+      font-size: 16px; font-weight: 600; color: #fff; letter-spacing: .3px;
+    }
+
+    .logo-txt span { color: var(--red); }
+
+    .hdr-ph {
+      display: flex; align-items: center; gap: 6px;
+      color: #fff; font-size: 12px; font-weight: 600;
+      padding: 7px 12px;
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: var(--r);
+      transition: border-color .2s;
+    }
+
+    .hdr-ph:hover { border-color: rgba(255,255,255,.4); }
+
+    .hdr-ph svg {
+      width: 14px; height: 14px;
+      stroke: var(--green-l); stroke-width: 2; fill: none;
+    }
+
+    .ph-txt { display: none; }
+
+    @media(min-width: 480px) { .ph-txt { display: inline; } }
+
+    /* ===== MAIN CONTENT ===== */
+    #ty-main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 100px 20px 60px;
+      background:
+        linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.5) 100%),
+        url('hero-bg.webp') center/cover no-repeat;
+    }
+
+    .ty-wrap {
+      max-width: 600px;
+      width: 100%;
+      text-align: center;
+    }
+
+    /* ===== ANIMATED CHECKMARK ===== */
+    .check-circle {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #16A34A, #4ADE80);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 28px;
+      box-shadow: 0 0 0 0 rgba(74,222,128,.5);
+      animation: checkPop .6s cubic-bezier(.26,1.5,.5,1) forwards, glowPulse 2.5s ease-in-out 0.7s infinite;
+    }
+
+    @keyframes checkPop {
+      from { transform: scale(0); opacity: 0; }
+      to   { transform: scale(1); opacity: 1; }
+    }
+
+    @keyframes glowPulse {
+      0%,100% { box-shadow: 0 0 0 0 rgba(74,222,128,.45); }
+      50%      { box-shadow: 0 0 0 16px rgba(74,222,128,0); }
+    }
+
+    .check-circle svg {
+      width: 48px; height: 48px;
+      stroke: #fff; stroke-width: 3;
+      fill: none;
+      stroke-dasharray: 100;
+      stroke-dashoffset: 100;
+      animation: drawCheck .5s ease .4s forwards;
+    }
+
+    @keyframes drawCheck {
+      to { stroke-dashoffset: 0; }
+    }
+
+    /* ===== TYPOGRAPHY ===== */
+    .ty-h1 {
+      font-family: var(--font-h);
+      font-size: clamp(26px, 6vw, 40px);
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.1;
+      margin-bottom: 14px;
+      letter-spacing: -.3px;
+    }
+
+    .ty-h1 span { color: #4ADE80; }
+
+    .ty-h2 {
+      font-family: var(--font-b);
+      font-size: clamp(15px, 2.5vw, 18px);
+      color: rgba(255,255,255,.85);
+      line-height: 1.6;
+      margin-bottom: 20px;
+      font-weight: 400;
+    }
+
+    .ty-body {
+      font-size: 14px;
+      color: rgba(255,255,255,.65);
+      line-height: 1.7;
+      margin-bottom: 32px;
+    }
+
+    /* ===== CTA BUTTONS ===== */
+    .ty-cta-call {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: linear-gradient(135deg, var(--red), #FF4D6D);
+      color: #fff;
+      font-family: var(--font-h);
+      font-size: 17px;
+      font-weight: 700;
+      letter-spacing: .8px;
+      text-transform: uppercase;
+      padding: 16px 36px;
+      border-radius: var(--r);
+      text-decoration: none;
+      transition: all .25s;
+      box-shadow: 0 8px 28px rgba(200,16,46,.45);
+      width: 100%;
+      max-width: 380px;
+      margin-bottom: 12px;
+    }
+
+    .ty-cta-call:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 36px rgba(200,16,46,.6);
+    }
+
+    .ty-cta-wa {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: #25D366;
+      color: #fff;
+      font-family: var(--font-h);
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: .5px;
+      text-transform: uppercase;
+      padding: 13px 32px;
+      border-radius: var(--r);
+      text-decoration: none;
+      transition: all .25s;
+      box-shadow: 0 6px 20px rgba(37,211,102,.35);
+      width: 100%;
+      max-width: 380px;
+      margin-bottom: 24px;
+    }
+
+    .ty-cta-wa:hover {
+      background: #1ebe5e;
+      transform: translateY(-1px);
+    }
+
+    .ty-hours {
+      font-size: 12px;
+      color: rgba(255,255,255,.45);
+      letter-spacing: .3px;
+      margin-bottom: 32px;
+    }
+
+    /* ===== STEPS CARD ===== */
+    .ty-steps {
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 16px;
+      padding: 20px 24px;
+      text-align: left;
+      backdrop-filter: blur(4px);
+      margin-bottom: 32px;
+    }
+
+    .ty-steps-title {
+      font-size: 11px;
+      font-weight: 700;
+      color: rgba(255,255,255,.4);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 14px;
+    }
+
+    .ty-step {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 9px 0;
+      font-size: 14px;
+      color: rgba(255,255,255,.8);
+    }
+
+    .ty-step + .ty-step {
+      border-top: 1px solid rgba(255,255,255,.07);
+    }
+
+    .ty-step-num {
+      width: 28px; height: 28px;
+      background: linear-gradient(135deg, var(--red), #FF4D6D);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-h);
+      font-size: 13px; font-weight: 700; color: #fff;
+      flex-shrink: 0;
+    }
+
+    /* ===== REDIRECT COUNTDOWN ===== */
+    .ty-redirect-note {
+      font-size: 12px;
+      color: rgba(255,255,255,.3);
+      margin-top: 8px;
+    }
+
+    #countdown { color: rgba(255,255,255,.55); font-weight: 600; }
+
+    /* ===== FOOTER ===== */
+    #ftr {
+      background: #07101A;
+      padding: 28px 20px;
+      border-top: 1px solid rgba(255,255,255,.06);
+    }
+
+    .ftr-in {
+      max-width: var(--max);
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      text-align: center;
+    }
+
+    .ftr-copy {
+      font-size: 11.5px;
+      color: rgba(255,255,255,.3);
+      line-height: 1.5;
+    }
+
+    .ftr-copy a { color: rgba(255,255,255,.35); }
+
+    @media(min-width: 601px) {
+      .hdr-in { height: 68px; }
+      .logo-mark { width: 38px; height: 38px; font-size: 19px; }
+      .logo-txt { font-size: 19px; }
+      #ty-main { padding: 120px 40px 80px; }
+      .ty-cta-call, .ty-cta-wa { width: auto; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header id="hdr" role="banner">
+    <div class="hdr-in">
+      <a href="https://www.cementshop.online" class="logo" aria-label="CementShop – Home">
+        <div class="logo-mark" aria-hidden="true">C</div>
+        <div class="logo-txt">Cement<span>Shop</span></div>
+      </a>
+      <a href="tel:+917632872970" class="hdr-ph" id="hdrPhone" aria-label="Call CementShop">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.64A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.91a16 16 0 006.13 6.13l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+        </svg>
+        <span class="ph-txt">+91 76328 72970</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- ===== THANK YOU CONTENT ===== -->
+  <main id="ty-main" role="main">
+    <div class="ty-wrap">
+
+      <!-- Animated green checkmark -->
+      <div class="check-circle" aria-hidden="true">
+        <svg viewBox="0 0 52 52">
+          <polyline points="14,27 22,35 38,19"/>
+        </svg>
+      </div>
+
+      <h1 class="ty-h1">Thank You! <span>We've Received</span><br>Your Request</h1>
+
+      <p class="ty-h2">Our team will call you within <strong style="color:#4ADE80;">30 minutes</strong><br>with the best bulk cement price.</p>
+
+      <p class="ty-body">
+        We've noted your requirement and one of our cement supply experts will contact you shortly.<br>
+        For urgent orders, call us directly:
+      </p>
+
+      <!-- Primary CTA -->
+      <a href="tel:+917632872970" class="ty-cta-call" id="callBtn">
+        📞 Call Now: +91 76328 72970
+      </a>
+
+      <!-- WhatsApp CTA -->
+      <a href="https://wa.me/917632872970?text=Hi%2C%20I%20just%20submitted%20a%20bulk%20cement%20order%20request.%20Please%20connect%20with%20me%20at%20the%20earliest." target="_blank" rel="noopener noreferrer" class="ty-cta-wa">
+        💬 WhatsApp Us
+      </a>
+
+      <p class="ty-hours">Business hours: Mon–Sat, 9AM to 7PM IST</p>
+
+      <!-- What happens next -->
+      <div class="ty-steps">
+        <div class="ty-steps-title">What Happens Next</div>
+        <div class="ty-step"><span class="ty-step-num">1</span><span>Our specialist reviews your requirement</span></div>
+        <div class="ty-step"><span class="ty-step-num">2</span><span>You receive a call with the best wholesale rate</span></div>
+        <div class="ty-step"><span class="ty-step-num">3</span><span>Confirm order &amp; get cement delivered to your site</span></div>
+      </div>
+
+      <!-- Countdown redirect note -->
+      <p class="ty-redirect-note">
+        Redirecting to homepage in <span id="countdown">60</span>s &nbsp;·&nbsp;
+        <a href="https://www.cementshop.online" style="color:rgba(255,255,255,.45);text-decoration:underline;">Go now</a>
+      </p>
+
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer id="ftr" role="contentinfo">
+    <div class="ftr-in">
+      <p class="ftr-copy">
+        &copy; 2024 CementShop. All rights reserved. &nbsp;·&nbsp;
+        <a href="https://www.cementshop.online">www.cementshop.online</a>
+        &nbsp;·&nbsp; GST Billing Available &nbsp;·&nbsp; Pan India Delivery
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    /* ===== 60-SECOND COUNTDOWN + AUTO-REDIRECT ===== */
+    let secs = 60;
+    const el = document.getElementById('countdown');
+    const timer = setInterval(() => {
+      secs--;
+      if (el) el.textContent = secs;
+      if (secs <= 0) {
+        clearInterval(timer);
+        window.location.href = '/';
+      }
+    }, 1000);
+
+    /* ===== HEADER SCROLL SHADOW ===== */
+    window.addEventListener('scroll', () => {
+      document.getElementById('hdr').style.boxShadow =
+        window.scrollY > 30 ? '0 4px 24px rgba(0,0,0,.5)' : '';
+    }, { passive: true });
+  </script>
+
+</body>
+
+</html>
